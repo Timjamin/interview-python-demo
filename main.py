@@ -4,11 +4,15 @@ import webbrowser
 def nadella_error():
     print("\033[31mEVIL NADELLA ERROR!!!!!!!!!! YOU INPUT THE WRONG THING!!!!!!!!!!!!!\033[0m")
     time.sleep(2)
-    webbrowser.open("https://i.imgur.com/51Cn8KF.jpeg")
+    webbrowser.open("https://files.catbox.moe/bi1mnu.jpeg")
 
 print("Hello yes welcome to this very intense interview")
 print("So how many divs can you center in an hour?")
-skill = int(input())
+try: # this is like the only real error handling I've ever done, mainly cause I only write software for myself and if I cause the error then it's my fault.
+    skill = int(input())
+except ValueError:
+    nadella_error()
+
 if skill < 86:
     print(f"Only {skill}? Really? Back in my day I was centering atleast 86 an hour, and that was BEFORE we had any of that fancy schmancy flexbox nonsense. You try centering divs on netscape as a full time career. Pathetic.")
     time.sleep(2)
@@ -27,6 +31,7 @@ elif skill > 86:
     print("Do you like my hair?")
     time.sleep(1)
     print("Actually don't answer that.")
+    time.sleep(2)
 else:
     nadella_error()
 
@@ -34,6 +39,7 @@ print("Have you ever been to prison? (y/n)")
 prison = input()
 if prison == "y":
     print("So what are you like, a criminal or something? Thats like illegal dude. You probably did something evil like digital piracy or breaking the DMCA. Super messed up.")
+    time.sleep(2)
 elif prison == "n":
     print("Pussy.")
 else:
@@ -62,8 +68,8 @@ else:
     print("Do you know who I am?")
     time.sleep(2)
     print("I'm Chris Hansen.")
-    time.sleep(1)
-    print("I'm with Dateline NBC, and we're doing a story on developers who like to program in forbidden languages.")
+    time.sleep(4)
+    print("I'm with Dateline NBC, and we're doing a story on developers who like to program in childish languages.")
     time.sleep(3)
     print("You see how this looks, right?")
     time.sleep(2)
